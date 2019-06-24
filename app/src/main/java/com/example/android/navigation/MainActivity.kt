@@ -16,13 +16,9 @@
 
 package com.example.android.navigation
 
-import androidx.databinding.DataBindingUtil
 import android.os.Bundle
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.NavController
-import androidx.navigation.NavDestination
-import androidx.navigation.Navigation
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.android.navigation.databinding.ActivityMainBinding
@@ -32,12 +28,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         @Suppress("UNUSED_VARIABLE")
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-        // TODO (01) Find the navController from myNavHostFragment
-        // Since we're using KTX, you can call this.findNavController
-        // TODO (02) Link the navController to our ActionBar
-        // By calling NavigationUI.setupActionBarWithNavController
+        // DONE (01) Find the navController from myNavHostFragment
+        //   Since we're using KTX, you can call this.findNavController
+        val navController = this.findNavController(R.id.myNavHostFragment)
+
+        // DONE (02) Link the navController to our ActionBar
+        //   By calling NavigationUI.setupActionBarWithNavController
+        NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
-    // TODO (03) Override onSupportNavigateUp
-    // Find the navController and then call navController.navigateUp
+    // DONE (03) Override onSupportNavigateUp
+    //   Find the navController and then call navController.navigateUp
+    override fun onSupportNavigateUp(): Boolean {
+        return findNavController(R.id.myNavHostFragment).navigateUp()
+    }
 }

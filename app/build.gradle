@@ -27,7 +27,7 @@ android {
     }
     defaultConfig {
         applicationId 'com.example.android.navigation'
-        minSdkVersion 19
+        minSdkVersion 24
         targetSdkVersion 28
         vectorDrawables.useSupportLibrary = true
         versionCode 1
@@ -43,7 +43,6 @@ android {
     productFlavors {
     }
 }
-
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
@@ -58,5 +57,9 @@ dependencies {
 
     // Material Design
     implementation "com.google.android.material:material:$version_material"
-    // TODO (01) Add the dependencies for navigation fragment ktx and navigation UI ktx
+
+    // DONE (01) Add the dependencies for navigation fragment ktx and navigation UI ktx
+    implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$version_navigation"
 }
+

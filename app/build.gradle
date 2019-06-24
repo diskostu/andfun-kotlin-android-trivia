@@ -59,7 +59,7 @@ dependencies {
     implementation "com.google.android.material:material:$version_material"
 
     // DONE (01) Add the dependencies for navigation fragment ktx and navigation UI ktx
-    implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation"
-    implementation "androidx.navigation:navigation-ui-ktx:$version_navigation"
+    implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"
+    implementation "android.arch.navigation:navigation-ui-ktx:$version_navigation"
 }
 

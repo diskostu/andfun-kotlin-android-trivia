@@ -47,4 +47,3 @@ class TitleFragment : Fragment() {
 // DONE (08) Connect the Title and Game Fragments with an Action
 // In the navigation editor, hover over the titleFragment.  Click on the circular connection
 // point and drag to gameFragment to create the Action
-}

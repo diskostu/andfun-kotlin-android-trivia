@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- super important: the ID of the menu item has to be the same as the ID from the fragment in the navigation
+         file. -->
+    <item
+        android:id="@+id/aboutFragment"
+        android:title="@string/about"/>
+</menu>

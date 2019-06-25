@@ -43,7 +43,7 @@ class TitleFragment : Fragment() {
         return binding.root
     }
 
-    // TODO (04) Override onCreateOptionsMenu
+    // DONE (04) Override onCreateOptionsMenu
     //   Use the passed-in MenuInflater to inflate the overflow_menu
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         super.onCreateOptionsMenu(menu, inflater)
@@ -51,7 +51,7 @@ class TitleFragment : Fragment() {
     }
 
 
-    // TODO (05) Override onOptionsItemSelected
+    // DONE (05) Override onOptionsItemSelected
     //   Return true if NavigationUI.onNavDestinationSelected returns true, else return
     //   super.onOptionsItemSelected.
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
